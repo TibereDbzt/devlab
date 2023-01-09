@@ -4,7 +4,7 @@ import {ReactNode} from "react"
 
 const EmptyContainer = ({children}: { children: ReactNode }) => <>{children}</>;
 
-function App({Component, pageProps}: AppProps) {
+export default function App({Component, pageProps}: AppProps) {
 
     // @ts-ignore: Unreachable code error
     const ContextProviderIfExists = Component.provider || EmptyContainer;

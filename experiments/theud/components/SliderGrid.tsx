@@ -159,8 +159,8 @@ export default function SliderGrid({slidesContent, gridLayout}: SliderProps) {
             </motion.div>
             { !gridLayout && (
                 <>
-                    <div className="fixed top-0 left-0 w-[33.33333vw] h-screen cursor-w-resize" onClick={() => setCurrentIndex(prevIndex => prevIndex - 1)} />
-                    <div className="fixed top-0 right-0 w-[33.33333vw] h-screen cursor-e-resize" onClick={() => setCurrentIndex(prevIndex => prevIndex + 1)} />
+                    <div className="fixed top-0 left-0 w-[33.33333vw] h-screen cursor-w-resize" onClick={() => setCurrentIndex(prevIndex => prevIndex === null ? prevIndex : prevIndex - 1)} />
+                    <div className="fixed top-0 right-0 w-[33.33333vw] h-screen cursor-e-resize" onClick={() => setCurrentIndex(prevIndex => prevIndex === null ? prevIndex : prevIndex + 1)} />
                 </>
             )}
         </motion.div>
